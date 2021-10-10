@@ -1,0 +1,12 @@
+body {
+  margin: 0 30px;
+}
+th {
+  text-align: start;
+}
+td {
+  width: 200px;
+}
+.btn-submit {
+  margin-bottom: 15px;
+}

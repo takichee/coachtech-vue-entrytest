@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>TODOアプリ</h1>
+  <div id="app">
+  <p>タスク名：<input type="text" v-model="addText" placeholder="Vue.js入門3章を終わらせる"></p>
+  <p>推定時間(分)：<input type="text" v-model="addTime" placeholder="30"></p>
+  <button v-on:click="addToDo()" class="btn-submit">追加</button>
+    <div v-if="list.length">
+      <table>
+        <tr>
+          <th>タスク</th>
+          <th>推定時間(分)</th>
+        </tr>
+        <tr v-for="todo in list">
+          <td>{{todo.text}}</td>
+          <td>{{todo.time}}分</td>
+        </tr>
+      </table>
+    </div>
+    <div v-else>
+      現在タスクはありません
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
